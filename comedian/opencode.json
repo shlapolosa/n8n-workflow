@@ -1,0 +1,42 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/qwen2.5:7b-instruct-q4_K_M",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (remote)",
+      "options": {
+        "baseURL": "https://ollama.socrates-hlapolosa.org/v1",
+        "apiKey": "ollama"
+      },
+      "models": {
+        "qwen2.5:7b-instruct-q4_K_M": {
+          "name": "Qwen 2.5 7B Instruct Q4_K_M",
+          "limit": { "context": 32768, "output": 4096 }
+        }
+      }
+    }
+  },
+  "tools": {
+    "read": true,
+    "write": true,
+    "edit": true,
+    "grep": true,
+    "glob": true,
+    "bash": false
+  },
+  "permission": {
+    "edit": "allow",
+    "write": "allow"
+  },
+  "instructions": ["AGENTS.md", ".opencode/agent/*.md", ".opencode/skills/*/SKILL.md"],
+  "agent": {
+    "comedian": {
+      "description": "A witty comedian that tells, catalogs, counts, and lists jokes",
+      "mode": "primary",
+      "model": "ollama/qwen2.5:7b-instruct-q4_K_M",
+      "temperature": 0.8,
+      "tools": { "read": true, "write": true, "edit": true, "bash": false }
+    }
+  }
+}

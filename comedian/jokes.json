@@ -1,0 +1,15 @@
+{
+  "jokes": [
+    {
+      "id": 1,
+      "joke": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "category": "one-liner",
+      "timestamp": "2025-12-23T13:45:00.000Z",
+      "rating": null
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2025-12-23T13:45:00.000Z",
+    "totalCount": 1
+  }
+}
